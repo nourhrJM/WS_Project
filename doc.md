@@ -11,8 +11,12 @@ The application allows:
   * Create a new group
   * Subscribe to new group
   * Delet a group (if he is the admin)
-  *
+  * Add a comment
+  * see group members 
 <h3> Technique used</h3>
 For this project we used the framework spring and spring security. For the project management we used maven, for the database we used mysql.
+
+<h3> How it works </h3>
+[Image of Yaktocat]WS_Project/login.png
 
 
