@@ -36,6 +36,7 @@ td {
        <a href="DELETEX">Delete profil page</a>
         <a href="Update">Update profil page</a>
         <a href="LIST">list profil page</a>
+        <a href="http://localhost:8080/LogN/services/groupes/pageT">Group Mangement</a>
        
     </h2>
 </body>

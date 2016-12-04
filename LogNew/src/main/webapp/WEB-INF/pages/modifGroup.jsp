@@ -8,7 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
     </script>
 </head>
-
 <style>
 body {
  font-size: 20px;
@@ -33,9 +32,7 @@ td {
 }
 </style>
 <body onload="load();">
-
-<%@ include file="MenuGroupes.jsp" %>
-<h2>${user}</h2>
+<h2>${title}</h2>
 <br/>
 
               <div id="registrationForm" />
@@ -53,7 +50,7 @@ td {
        </TR>
        
        <TR>
-       <td><input type="hidden" id="admin" name="admin" placeholder="admin" value="${user }" /></td>
+       <td><input type="hidden" id="admin" name="admin" placeholder="admin" value="Me" /></td>
        </TR>
  		<TR>
        <td><input type="hidden" id="members" name="members" placeholder="members" value="Me" /></td>
@@ -96,17 +93,7 @@ td {
             });        
     }
     
-    delete_ = function(id){     
-        $.ajax({
-           url:'delete',
-           type:'POST',
-           data:{groupe_id:id},
-           success: function(response){
-                   alert(response.message);
-                   load();
-           }              
-       });
-}
+   
     
     edit = function (index){
         $("#groupe_id").val(data[index].groupe_id);

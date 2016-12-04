@@ -18,14 +18,24 @@ public class GroupesServiceImpl implements GroupesService {
 	 public boolean saveOrUpdate(Groupes groupes) {
 	        return groupesDao.saveOrUpdate(groupes);
 	    }
-	    public List<Groupes> list() {
+	    public List<Groupes> list(String admin) {
 	        // TODO Auto-generated method stub
-	        return groupesDao.list();
+	        return groupesDao.list(admin);
 	    }
 	 
 	    public boolean delete(Groupes groupes) {
 	        // TODO Auto-generated method stub
 	        return groupesDao.delete(groupes);
 	    }
+		
+		public List<Groupes> listTout(String admin) {
+			
+			return groupesDao.listTout(admin);
+		}
+		@Override
+		public List<Groupes> listgroupe() {
+			
+			return groupesDao.listgroupe();
+		}
 	
 }

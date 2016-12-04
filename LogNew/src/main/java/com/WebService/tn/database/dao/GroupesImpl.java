@@ -25,8 +25,9 @@ public class GroupesImpl implements GroupesDao{
 	        return true;
 	    }
 	 
-	 public List<Groupes> list() {
-	        return session.getCurrentSession().createQuery("from Groupes").list();
+	 @SuppressWarnings("unchecked")
+	public List<Groupes> list(String admin) {
+	        return session.getCurrentSession().createQuery("from Groupes where admin='"+admin+"'").list();
 	    }
 	 
 	    public boolean delete(Groupes groupes) {
@@ -38,5 +39,19 @@ public class GroupesImpl implements GroupesDao{
 	 
 	        return true;
 	    }
+
+		
+		@SuppressWarnings("unchecked")
+		public List<Groupes> listTout(String admin) {
+			
+			return session.getCurrentSession().createQuery("from Groupes where admin<>'"+admin+"'").list();
+		}
+
+		
+		@SuppressWarnings("unchecked")
+		public List<Groupes> listgroupe() {
+		
+			return session.getCurrentSession().createQuery("from Groupes").list();
+		}
 
 }
