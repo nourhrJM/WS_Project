@@ -17,6 +17,6 @@ The application allows:
 For this project we used the framework spring and spring security. For the project management we used maven, for the database we used mysql.
 
 <h3> How it works </h3>
-[Image of Yaktocat]WS_Project/login.png
+
 
 
